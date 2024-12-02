@@ -43,7 +43,7 @@ function Login() {
         </div>
         <button style={{ marginTop: 20, height: 30, width: 100 }}>Login</button>
         <text>
-          don't have an account!please <a  href={'login'}>Register</a>
+          don't have an account!please <a  href={'Register'}>Register</a>
         </text>
       </div>
     </>
