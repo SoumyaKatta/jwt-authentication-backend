@@ -1,4 +1,8 @@
+import { useNavigation } from '@react-navigation/native';
+import Register from './Register';
 function Login() {
+    const navigation = useNavigation();
+
   return (
     <>
       <div
