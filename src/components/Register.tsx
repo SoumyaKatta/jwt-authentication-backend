@@ -15,7 +15,7 @@ function Register(){
         <input style={{ height:30, width:400}}placeholder="enter password" />
       </div>
       <button style={{ marginTop:20, height:30, width:100}}>Register</button>
-      <text>Already have an account!please login</text>
+      <text>Already have an account!please <a href={'Login'}>login</a></text>
       </div>
         </>
     )
