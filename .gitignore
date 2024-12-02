@@ -6,6 +6,7 @@
 .pnp.js
 
 connection.js
+user.js
 # testing
 /coverage
 
