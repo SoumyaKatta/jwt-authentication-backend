@@ -8,3 +8,4 @@ const userSchema = new Schema({
   });
   const User = mongoose.model('User', userSchema);
   console.log('User model was created');
+  module.exports = User;
