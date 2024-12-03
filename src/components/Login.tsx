@@ -31,6 +31,8 @@ function Login() {
           <input
             style={{ height: 30, width: 400, marginBottom: 20 }}
             placeholder="enter username"
+            value={username}
+            onChange={(e)=>setUsername(e.target.value)}
           />
         </div>
         <div
@@ -46,6 +48,8 @@ function Login() {
           <input
             style={{ height: 30, width: 400 }}
             placeholder="enter password"
+            value={password}
+            onChange={(e)=>setPassword(e.target.value)}
           />
         </div>
         <button
