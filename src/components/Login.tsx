@@ -1,8 +1,11 @@
 // import { useNavigation } from '@react-navigation/native';
 // import Register from './Register';
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function Login() {
   const navigate = useNavigate();
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
   return (
     <>
       <div
@@ -45,9 +48,19 @@ function Login() {
             placeholder="enter password"
           />
         </div>
-        <button style={{ marginTop: 20, height: 30, width: 100 }}>Login</button>
+        <button
+          style={{ marginTop: 20, height: 30, width: 100 }}
+          onClick={() => {
+            console.log("You clicked me!");
+          }}
+        >
+          Login
+        </button>
         <text>
-          don't have an account!please <a onClick={()=> navigate('/Register')} href={'/Register'}>Register</a>
+          don't have an account!please{" "}
+          <a onClick={() => navigate("/Register")} href={"/Register"}>
+            Register
+          </a>
         </text>
       </div>
     </>
