@@ -9,7 +9,22 @@ function Login() {
   const [email,setEmail]=useState("")
   
   const handleLogin = async()=>{
-    
+    try {
+      const res = await fetch(`http://localhost:4000/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username,email,password }),
+      });
+      console.log("heelelo", res.status);
+      const data = await res.json();
+      if (res.status == 201) {
+        navigate("/dashboard");
+      }
+    } catch (err) {
+      return err;
+    }
   }
   return (
     <>
