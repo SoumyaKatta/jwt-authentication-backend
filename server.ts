@@ -22,7 +22,7 @@ app.post('/register',async(req:any,res:any)=>{
         password:hashpassword
       })
       const token = jwt.sign({_id:newUser._id},'secretkey123',{
-        expiresIn:'2M'
+        expiresIn:'90d'
       })
       res.status(201).json({
         status:"success",
