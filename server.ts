@@ -1,8 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 const express = require('express');
 const app = express();
+const cors = require('cors')
 const User = require('./src/models/User')
 app.use(express.json())
+const corsOptions = {
+    origin: 'http://localhost:4000'
+}
+app.use(cors(corsOptions))
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 app.get('/',(req:any,res:any)=>{
