@@ -35,8 +35,25 @@ app.post('/register',async(req:any,res:any)=>{
     }
 
 })
-app.post("/login",(req:any,res:any)=>{
+app.post("/login",async(req:any,res:any)=>{
   const {username,email,password} = req.body
+  const user = await User.findOne({email})
+  if(!user) res.json('user not found');
+  const isPasswordValid = await bcrypt.compare(password, user.password)
+  if(!isPasswordValid) res.json("Invalid email or password");
+  const token = jwt.sign({_id:user._id},'secretkey123',{
+    expiresIn:'90d'
+  })
+  res.status(201).json({
+    status:"success",
+    message:"user login successfully",
+    token,
+    user:{
+      _id:user._id,
+      username:user.username,
+      email:user.email,
+    }
+  })
 })
 app.listen(4000);
 export default app;
