@@ -6,6 +6,7 @@ function Login() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const [email,setEmail]=useState("")
   
   const handleLogin = async()=>{
     
@@ -31,12 +32,12 @@ function Login() {
             gap: 20,
           }}
         >
-          <label style={{ justifyContent: "flex-start" }}>User name</label>
+          <label style={{ justifyContent: "flex-start" }}>Username/Email</label>
           <input
             style={{ height: 30, width: 400, marginBottom: 20 }}
-            placeholder="enter username"
+            placeholder="enter your username/email"
             value={username}
-            onChange={(e)=>setUsername(e.target.value)}
+            onChange={(e)=>{setUsername(e.target.value);setEmail(e.target.value)}}
           />
         </div>
         <div
