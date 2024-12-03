@@ -25,6 +25,9 @@ function Login() {
     } catch (err) {
       return err;
     }
+    setUsername('')
+    setEmail('')
+    setPassword('')
   }
   return (
     <>
@@ -75,7 +78,7 @@ function Login() {
         <button
           style={{ marginTop: 20, height: 30, width: 100 }}
           onClick={() => {
-            console.log("You clicked me!");
+           handleLogin()
           }}
         >
           Login

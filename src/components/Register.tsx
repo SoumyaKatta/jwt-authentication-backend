@@ -25,6 +25,9 @@ function Register() {
     } catch (err) {
       return err;
     }
+    setUsername('')
+    setEmail('')
+    setPassword('')
   };
   return (
     <>
