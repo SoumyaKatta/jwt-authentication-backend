@@ -35,5 +35,8 @@ app.post('/register',async(req:any,res:any)=>{
     }
 
 })
+app.post("/login",(req:any,res:any)=>{
+  const {username,email,password} = req.body
+})
 app.listen(4000);
 export default app;
