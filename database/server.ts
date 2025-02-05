@@ -2,10 +2,10 @@
 const express = require('express');
 const app = express();
 const cors = require('cors')
-const User = require('./src/models/User')
+const User = require('./models/User')
 app.use(express.json())
 const corsOptions = {
-    origin: ['http://localhost:4000','http://localhost:3000']
+    origin: ['http://localhost:4000','http://localhost:3000', 'http://localhost:8000']
 }
 app.use(cors(corsOptions))
 const bcrypt = require('bcrypt')
