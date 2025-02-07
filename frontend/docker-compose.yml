@@ -1,8 +1,0 @@
-services:
-    frontend:
-      container_name: frontend-container
-      command: tail -f /dev/null
-      # restart: alway
-      build: .
-      ports: 
-         - "2000:3000"
